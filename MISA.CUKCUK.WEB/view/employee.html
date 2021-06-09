@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Danh sách nhân viên</title>
+
+    <!-- Phần thư viện -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Phần dùng chung -->
+    <link href="/css/common/header.css" rel="stylesheet" />
+    <link href="/css/common/content.css" rel="stylesheet" />
+    <link href="/css/common/main.css" rel="stylesheet" />
+    <link href="/css/common/sidebar.css" rel="stylesheet" />
+    <link href="/css/common/button.css" rel="stylesheet" />
+    <link href="/css/common/toolbar.css" rel="stylesheet" />
+    <link href="/css/common/grid.css" rel="stylesheet" />
+    <link href="/css/common/paging.css" rel="stylesheet" />
+    <link href="/css/common/icon.css" rel="stylesheet" />
+    <link href="/css/common/align.css" rel="stylesheet" />
+    <link href="/css/common/dialog.css" rel="stylesheet" />
+    <!-- Phần dùng riêng từng màn hình -->
+    <link href="../css/page/employee.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrap-body">
+        <!-- Phần menu bên tay trái -->
+        <div class="sidebar">
+
+            <!-- Phần logo -->
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-toggle">
+                </div>
+
+                <div class="sidebar-logo-cukcuk">
+
+                </div>
+            </div>
+
+            <!-- Phần danh sách chức năng -->
+            <div class="sidebar-content">
+                <div class="sidebar-content-item">
+                    <div class="sidebar-item-icon icon-overview-20"></div>
+                    <div class="sidebar-item-text">Tổng quan</div>
+                </div>
+
+                <div class="sidebar-content-item">
+                    <div class="sidebar-item-icon icon-report-20"></div>
+                    <div class="sidebar-item-text">Báo cáo</div>
+                </div>
+
+                <div class="sidebar-content-item">
+                    <div class="sidebar-item-icon icon-purchase-20"></div>
+                    <div class="sidebar-item-text">Mua hàng</div>
+                </div>
+
+                <div class="sidebar-content-item">
+                    <div class="sidebar-item-icon icon-employee-list-20"></div>
+                    <div class="sidebar-item-text">Danh mục nhân viên</div>
+                </div>
+
+                <div class="sidebar-content-item">
+                    <div class="sidebar-item-icon icon-setting-20"></div>
+                    <div class="sidebar-item-text">Thiết lập hệ thống</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wrap-right">
+            <!-- Phần header -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="header-left-text">Nhà hàng Biển Đông</div>
+                    <div class="header-left-icon"><i class="fas fa-chevron-down"></i></div>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-right-avatar"></div>
+                    <div class="header-right-name">Đinh Ngọc Định</div>
+                    <div class="header-right-option icon-option-16"></div>
+                </div>
+            </div>
+
+            <!-- Phần nội dung trang -->
+            <div class="content">
+                <div class="content-header">
+                    <div class="content-header-text">Danh sách nhân viên</div>
+                    <div class="content-header-feature">
+                        <button class="m-btn-icon">
+                            <div class="icon-add-16"></div>
+                            <div class="btn-text">Thêm nhân viên</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-filter-bar">
+                    <div class="content-filter-left">
+                        <input style="width: 260px;" class="icon-search-16 search-bar field-input-icon" type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
+                    </div>
+
+                    <div class="content-filter-right">
+                        <div class="icon-refresh"></div>
+                    </div>
+                </div>
+
+                <div class="content-grid employee-grid">
+                    <table border="0" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Mã nhân viên</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th class="m-align-center">Ngày sinh</th>
+                                <th>Điện thoại</th>
+                                <th>Email</th>
+                                <th>Chức vụ</th>
+                                <th>Phòng ban</th>
+                                <th class="m-align-right">Mức lương cơ bản</th>
+                                <th>Tình trạng công việc</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                            <tr>
+                                <td>MF874</td>
+                                <td>Đinh Ngọc Định</td>
+                                <td>Nam</td>
+                                <td class="m-align-center">21/08/1997</td>
+                                <td>0394466363</td>
+                                <td>dinhdinhngoc1997@gmail.com</td>
+                                <td>Fresher</td>
+                                <td>Viện đào tạo</td>
+                                <td class="m-align-right">3.000.000</td>
+                                <td>Đang thử việc</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-paging-bar">
+                    <div class="paging-bar-left">Hiển thị 1-10/1000 nhân viên</div>
+                    <div class="paging-bar paging-bar-center">
+
+                        <div class="paging-bar-item paging-bar-item-no-bg-color">
+                            <div class="paging-bar-icon icon-first-page"></div>
+                        </div>
+
+                        <div class="paging-bar-item paging-bar-item-no-bg-color">
+                            <div class="paging-bar-icon icon-prev-page"></div>
+                        </div>
+
+                        <div style="background-color: #019160" class="paging-bar-item">
+                            <div class="paging-bar-icon">1</div>
+                        </div>
+
+                        <div class="paging-bar-item">
+                            <div class="paging-bar-icon">2</div>
+                        </div>
+
+                        <div class="paging-bar-item">
+                            <div class="paging-bar-icon">3</div>
+                        </div>
+
+                        <div class="paging-bar-item">
+                            <div class="paging-bar-icon">4</div>
+                        </div>
+
+                        <div class="paging-bar-item paging-bar-item-no-bg-color">
+                            <div class="paging-bar-icon icon-next-page"></div>
+                        </div>
+
+                        <div class="paging-bar-item paging-bar-item-no-bg-color">
+                            <div class="paging-bar-icon icon-last-page"></div>
+                        </div>
+
+
+                    </div>
+                    <div class="paging-bar-right">10 nhân viên/trang</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog-detail">
+        <div class="dialog-modal"></div>
+        <div class="dialog-content">
+            <div class="dialog-content-header">
+                <div class="dialog-content-header-text">THÔNG TIN NHÂN VIÊN</div>
+                <button class="dialog-content-header-icon icon-close"></button>
+            </div>
+
+            <div class="dialog-content-body">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Thư viện -->
+    <script src="/lib/jquery-3.6.0.min.js"></script>
+    <!-- Thành phần dùng chung -->
+    <script src="/js/common/common.js"></script>
+    <!-- Thành phần dùng riêng -->
+    <script src="/js/page/employee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+table th,
+td {
+    border-bottom: 1px solid #bbbbbb;
+    padding: 10px 16px;
+    text-align: left;
+}
+
+tr {
+    height: 48px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+}

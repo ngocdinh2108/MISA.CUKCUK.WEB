@@ -1,0 +1,32 @@
+.paging-bar {
+    display: flex;
+    align-items: center;
+}
+
+.first-page {
+    display: flex;
+    align-items: center;
+}
+
+.paging-bar-item {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #e5e5e5;
+}
+
+.paging-bar-item:hover {
+    background-color: #2FBE8E;
+}
+
+.paging-bar-icon {
+    margin-left: 11px;
+}
+
+.paging-bar-item-no-bg-color {
+    background-color: #FFFFFF;
+}

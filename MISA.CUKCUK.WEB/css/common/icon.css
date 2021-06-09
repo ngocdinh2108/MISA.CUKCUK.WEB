@@ -1,0 +1,118 @@
+.icon-overview-20 {
+    background-image: url('/content/icon/dashboard.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-report-20 {
+    background-image: url('/content/icon/report.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-purchase-20 {
+    background-image: url('/content/icon/document-online.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-employee-list-20 {
+    background-image: url('/content/icon/dic-employee.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-setting-20 {
+    background-image: url('/content/icon/setting.png');
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-option-16 {
+    background-image: url('/content/icon/option.png');
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-add-16 {
+    background-image: url('/content/icon/add.png');
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-search-16 {
+    background-image: url('/content/icon/search.png');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.icon-refresh {
+    background-image: url('/content/icon/refresh.png');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.icon-first-page {
+    background-image: url('/content/icon/btn-firstpage.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 7px;
+}
+
+.icon-prev-page {
+    background-image: url('/content/icon/btn-prev-page.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 7px;
+}
+
+.icon-next-page {
+    background-image: url('/content/icon/btn-next-page.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 7px;
+}
+
+.icon-last-page {
+    background-image: url('/content/icon/btn-lastpage.svg');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 7px;
+}
+
+.icon-close {
+    background-image: url('/content/icon/x.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}

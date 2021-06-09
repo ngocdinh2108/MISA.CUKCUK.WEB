@@ -1,0 +1,45 @@
+.header {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header-left-text {
+    font-size: 15px;
+    font-family: GoogleSans-Bold;
+    color: #000000;
+    margin-left: 16px;
+    margin-right: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right-avatar {
+    background-image: url('/content/img/avatar-default.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.header-right-name {
+    margin-right: 10px;
+}
+
+.header-right-option {
+    margin-right: 16px;
+}
