@@ -73,38 +73,30 @@
 
 .icon-first-page {
     background-image: url('/content/icon/btn-firstpage.svg');
-    width: 16px;
-    height: 16px;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 7px;
+    background-size: 16px;
+    background-position: center;
 }
 
 .icon-prev-page {
     background-image: url('/content/icon/btn-prev-page.svg');
-    width: 16px;
-    height: 16px;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 7px;
+    background-size: 16px;
+    background-position: center;
 }
 
 .icon-next-page {
     background-image: url('/content/icon/btn-next-page.svg');
-    width: 16px;
-    height: 16px;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 7px;
+    background-size: 16px;
+    background-position: center;
 }
 
 .icon-last-page {
     background-image: url('/content/icon/btn-lastpage.svg');
-    width: 16px;
-    height: 16px;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 7px;
+    background-size: 16px;
+    background-position: center;
 }
 
 .icon-close {

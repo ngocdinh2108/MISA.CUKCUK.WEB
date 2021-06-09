@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    loadData();
+    loadData(employees);
 })
 
 /**
@@ -28,8 +28,9 @@ function loadData() {
                         <td>3.000.000</td>
                         <td>Đang thử việc</td>
                     </tr>`);
-        $('table tbody').append(tr);
-        debugger;
+
+        // Biding từng dòng vào tbody
+
     }).fail(function(res) {
 
     })
@@ -37,19 +38,27 @@ function loadData() {
     //Biding dữ liệu về
 }
 
-function loadData() {
-    var tr = $(`<tr>
-                        <td>MF874</td>
-                        <td>Đinh Ngọc Định</td>
-                        <td>Nam</td>
-                        <td class="m-align-center">21/08/1997</td>
-                        <td>0394466363</td>
-                        <td>dinhdinhngoc1997@gmail.com</td>
-                        <td>Fresher</td>
-                        <td>Viện đào tạo</td>
-                        <td class="m-align-right">3.000.000</td>
-                        <td>Đang thử việc</td>
-                    </tr>`);
-    $('table tbody').append(tr);
-    debugger;
+/**
+ * Hàm dùng để lấy dữ liệu từ data.js
+ * DNDINH 09.06.2021
+ */
+function loadData(data) {
+    if (data && data.length > 0) {
+        var tr = '';
+        $.each(data, function(index, item) {
+            tr += `<tr>
+                        <td>${item.ID}</td>
+                        <td>${item.FullName}</td>
+                        <td>${item.Gender}</td>
+                        <td class="m-align-center">${item.DateOfBirth}</td>
+                        <td>${item.PhoneNumber}</td>
+                        <td>${item.Email}</td>
+                        <td>${item.Position}</td>
+                        <td>${item.Department}</td>
+                        <td class="m-align-right">${item.Salary}</td>
+                        <td>${item.Status}</td>
+                    </tr>`;
+        })
+        $('table tbody').html(tr);
+    }
 }
