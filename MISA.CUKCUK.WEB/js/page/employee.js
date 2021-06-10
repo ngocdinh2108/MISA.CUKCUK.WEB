@@ -2,6 +2,10 @@ $(document).ready(function() {
     loadData(employees);
 })
 
+class Employee {
+
+}
+
 /**
  * Hàm dùng để lấy dữ liệu nhân viên từ data.js
  * DNDINH 09.06.2021
