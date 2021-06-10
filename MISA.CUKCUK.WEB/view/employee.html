@@ -113,17 +113,17 @@
                     <table border="0" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th class="m-align-center"><input type="checkbox" /></th>
-                                <th>Mã nhân viên</th>
-                                <th>Họ và tên</th>
-                                <th>Giới tính</th>
-                                <th class="m-align-center">Ngày sinh</th>
-                                <th>Điện thoại</th>
-                                <th>Email</th>
-                                <th>Chức vụ</th>
-                                <th>Phòng ban</th>
-                                <th class="m-align-right">Mức lương cơ bản</th>
-                                <th>Tình trạng công việc</th>
+                                <!-- <th class="m-align-center"><input type="checkbox" /></th> -->
+                                <th fieldName="ID">Mã nhân viên</th>
+                                <th fieldName="FullName">Họ và tên</th>
+                                <th fieldName="Gender">Giới tính</th>
+                                <th fieldName="DateOfBirth" class="m-align-center">Ngày sinh</th>
+                                <th fieldName="PhoneNumber">Điện thoại</th>
+                                <th fieldName="Email">Email</th>
+                                <th fieldName="Position">Chức vụ</th>
+                                <th fieldName="Department">Phòng ban</th>
+                                <th fieldName="Salary" class="m-align-right">Mức lương cơ bản</th>
+                                <th fieldName="Status">Tình trạng công việc</th>
                             </tr>
                         </thead>
 
@@ -188,6 +188,7 @@
     <script src="/lib/jquery-3.6.0.min.js"></script>
     <!-- Phần dùng chung -->
     <script src="/js/common/common.js"></script>
+    <script src="/js/common/base.js"></script>
     <script src="/js/data.js"></script>
     <!-- Phần dùng riêng từng màn hình -->
     <script src="/js/page/employee.js"></script>
