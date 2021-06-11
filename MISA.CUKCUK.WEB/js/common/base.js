@@ -7,17 +7,19 @@ class Base {
         // Lấy thông tin các cột dữ liệu
         var ths = $('table thead th');
         var fieldNames = [];
-
         // Lấy thông tin dữ liệu sẽ map tương ứng với các cột
-        $.each(data, function(index, item) {
-            var tr = `<tr></tr>`;
-            debugger;
-            $.each(ths, function(index, item) {
-                var fieldName = $(item).attr('fieldName');
-                var td = `<td></td>`;
+        $.each(data, function(index, obj) {
+            var tr = $(`<tr></tr>`);
+            $.each(ths, function(index, th) {
+                var td = $(`<td></td>`);
+                var fieldName = $(th).attr('fieldName');
+                var value = obj[fieldName];
+                td.append(value);
+                tr.append(td);
                 debugger;
             })
-            $(tr).append(item[fieldName]);
+            $('table tbody').append(tr);
+            debugger;
         })
 
     }

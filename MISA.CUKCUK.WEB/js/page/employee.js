@@ -25,7 +25,7 @@ class Employee extends Base {
     //             salary = formatMoney(salary);
     //             dateOfBirth = formatDate(dateOfBirth);
     //             tr += `<tr>
-    //                         <td class="m-align-center"><input type="checkbox"/></td>
+
     //                         <td>${item.ID}</td>
     //                         <td>${item.FullName}</td>
     //                         <td>${item.Gender}</td>
@@ -38,7 +38,7 @@ class Employee extends Base {
     //                         <td>${item.Status}</td>
     //                     </tr>`;
     //         })
-    //         $('table tbody').html(tr);
+    //         $('table tbody').append(tr);
     //     }
     // }
 
