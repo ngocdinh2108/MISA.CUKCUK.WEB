@@ -13,6 +13,7 @@
 
 .paging-item-icon {
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .paging-item-icon:hover {
@@ -23,6 +24,7 @@
     border-radius: 30px;
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
+    cursor: pointer;
 }
 
 .paging-item-number:hover {
