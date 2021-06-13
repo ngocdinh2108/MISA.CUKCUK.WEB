@@ -1,4 +1,5 @@
 body {
+    height: 100vh;
     font-family: GoogleSans-Regular;
     font-size: 13px;
     margin: 0;
@@ -14,6 +15,15 @@ body {
 .wrap-right {
     height: 100%;
     width: calc(100% - 221px);
+}
+
+.select-gender {
+    height: 34px;
+    width: 264px;
+    border-radius: 3px;
+    border: 2px solid #e5e5e5;
+    outline: none;
+    padding-left: 16px;
 }
 
 @font-face {

@@ -19,9 +19,11 @@ class Base {
                     switch (dataType) {
                         case 'Date':
                             value = formatDate(value);
+                            td.addClass("m-align-center");
                             break;
                         case 'Money':
                             value = formatMoney(value);
+                            td.addClass("m-align-right");
                             break;
                         default:
                             break;

@@ -4,7 +4,7 @@
     width: 100%;
     height: 100vh;
     background-color: black;
-    z-index: 9;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
@@ -13,13 +13,12 @@
 
 .dialog-content {
     width: 800px;
-    height: 600px;
+    height: 610px;
     position: absolute;
     background-color: #ffffff;
-    z-index: 10;
-    top: calc(50% - 300px);
+    z-index: 3;
+    top: calc(50% - 330px);
     left: calc(50% - 400px);
-    padding: 24px;
     border-radius: 5px;
 }
 
@@ -27,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 24px;
+    padding: 24px;
 }
 
 .dialog-content-header-text {
@@ -50,8 +49,67 @@
 }
 
 .dialog-content-body {
-    padding: 24px;
-    background-color: coral;
+    height: calc(100% - 81px);
+    margin: 0 24px;
+    display: flex;
+}
+
+.dialog-body-left {
+    width: 180px;
+}
+
+.dialog-body-avatar {
+    width: 180px;
+    height: 180px;
+    background-image: url('/content/img/default-avatar.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid #e5e5e5;
+    border-radius: 100px;
+}
+
+.dialog-body-text {
+    text-align: center;
+}
+
+.dialog-body-right {
     width: 100%;
-    height: 40px;
+    margin: 0 0 24px 24px;
+}
+
+.dialog-body-header {
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+
+.dialog-body-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog-body-row-left {
+    padding: 4px 0;
+}
+
+.dialog-label {
+    padding-bottom: 4px;
+}
+
+.dialog-content-footer {
+    height: 56px;
+    background-color: #e5e5e5;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.input-dialog {
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    width: 244px;
+    border: 2px solid #e5e5e5;
+    padding-left: 16px;
 }

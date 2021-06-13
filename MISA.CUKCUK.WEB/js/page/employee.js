@@ -1,5 +1,10 @@
 $(document).ready(function() {
     new Employee();
+    dialog = $(".dialog-detail").dialog({
+        autoOpen: false,
+        fluid: true,
+        modal: true
+    });
 })
 
 /**
@@ -8,7 +13,6 @@ $(document).ready(function() {
  */
 class Employee extends Base {
     constructor() {
-        // this.loadData(employees);
         super();
     }
 

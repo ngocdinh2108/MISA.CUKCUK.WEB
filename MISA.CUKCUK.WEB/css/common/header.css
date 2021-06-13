@@ -28,7 +28,7 @@
 }
 
 .header-right-avatar {
-    background-image: url('/content/img/avatar-default.png');
+    background-image: url('/content/icon/avatar-default.png');
     background-repeat: no-repeat;
     background-size: contain;
     width: 34px;

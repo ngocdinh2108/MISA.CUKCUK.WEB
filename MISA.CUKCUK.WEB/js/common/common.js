@@ -26,6 +26,10 @@ function formatDate(dateString) {
  * @returns 
  */
 function formatMoney(money) {
-    let result = money.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
-    return result;
+    if (money) {
+        let result = money.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+        return result;
+    } else {
+        return "";
+    }
 }

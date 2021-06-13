@@ -170,7 +170,8 @@
         </div>
     </div>
 
-    <div class="dialog-detail" hidden>
+    <!-- Dialog -->
+    <div class="dialog-detail">
         <div class="dialog-modal"></div>
         <div class="dialog-content">
             <div class="dialog-content-header">
@@ -179,7 +180,140 @@
             </div>
 
             <div class="dialog-content-body">
+                <div class="dialog-body-left">
+                    <div class="dialog-body-avatar"></div>
+                    <div class="dialog-body-text">(Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.)</div>
+                </div>
 
+                <div class="dialog-body-right">
+                    <div class="dialog-body-header">A. THÔNG TIN CHUNG:</div>
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Mã nhân viên (<span style="color: red;">*</span>)</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Họ và tên (<span style="color: red;">*</span>)</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Ngày sinh</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="date">
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Giới tính</div>
+                            <div class="wrap-input-dialog">
+                                <select class="select-gender" value="">
+                                    <option name="" id="">Nam</option>
+                                    <option name="" id="">Nữ</option>
+                                    <option name="" id="">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Số CMTND/ Căn cước (<span style="color: red;">*</span>)</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text" disabled>
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Ngày cấp</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="date" disabled>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Nơi cấp</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Email (<span style="color: red;">*</span>)</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Số điện thoại (<span style="color: red;">*</span>)</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dialog-body-header">B. THÔNG TIN CÔNG VIỆC:</div>
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Vị trí</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Phòng ban</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dialog-body-row">
+                        <div class="dialog-body-row-left">
+                            <div class="dialog-label">Mức lương cơ bản</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                        <div class="dialog-body-row-right">
+                            <div class="dialog-label">Tình trạng công việc</div>
+                            <div class="wrap-input-dialog">
+                                <input class="input-dialog" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="dialog-content-footer">
+                <button class="m-btn-icon btn-dialog-no-icon">
+                    <div class="btn-text btn-dialog">Hủy</div>
+                </button>
+                <button class="m-btn-icon btn-dialog-icon">
+                    <i class="far fa-save"></i>
+                    <div class="btn-dialog">Lưu</div>
+                </button>
             </div>
         </div>
     </div>
