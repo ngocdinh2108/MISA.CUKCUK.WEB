@@ -7,6 +7,7 @@
 
     <!-- Phần thư viện -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/lib/jquery-ui-1.12.1/jquery-ui.css">
     <!-- Phần dùng chung -->
     <link href="/css/common/header.css" rel="stylesheet" />
     <link href="/css/common/content.css" rel="stylesheet" />
@@ -91,7 +92,7 @@
                 <div class="content-header">
                     <div class="content-header-text">Danh sách nhân viên</div>
                     <div class="content-header-feature">
-                        <button class="m-btn-icon">
+                        <button class="m-btn-icon" id="m-btn-add">
                             <div class="icon-add-16"></div>
                             <div class="btn-text">Thêm nhân viên</div>
                         </button>
@@ -105,7 +106,7 @@
                     </div>
 
                     <div class="content-filter-right">
-                        <div class="icon-refresh"></div>
+                        <div id="btn-reload" class="icon-refresh"></div>
                     </div>
                 </div>
 
@@ -171,12 +172,12 @@
     </div>
 
     <!-- Dialog -->
-    <div class="dialog-detail">
+    <div class="dialog-detail" hidden>
         <div class="dialog-modal"></div>
         <div class="dialog-content">
             <div class="dialog-content-header">
                 <div class="dialog-content-header-text">THÔNG TIN NHÂN VIÊN</div>
-                <button class="dialog-content-header-icon icon-close"></button>
+                <button class="dialog-close dialog-content-header-icon icon-close"></button>
             </div>
 
             <div class="dialog-content-body">
@@ -191,14 +192,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Mã nhân viên (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtID" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Họ và tên (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtFullName" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
@@ -208,14 +209,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Ngày sinh</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="date">
+                                <input id="dtDateOfBirth" class="input-dialog" type="date">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Giới tính</div>
                             <div class="wrap-input-dialog">
-                                <select class="select-gender" value="">
+                                <select id="cbxGender" class="select-gender" value="">
                                     <option name="" id="">Nam</option>
                                     <option name="" id="">Nữ</option>
                                     <option name="" id="">Khác</option>
@@ -227,7 +228,7 @@
 
                     <div class="dialog-body-row">
                         <div class="dialog-body-row-left">
-                            <div class="dialog-label">Số CMTND/ Căn cước (<span style="color: red;">*</span>)</div>
+                            <div class="dialog-label">Số CMTND/ Căn cước</div>
                             <div class="wrap-input-dialog">
                                 <input class="input-dialog" type="text" disabled>
                             </div>
@@ -255,14 +256,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Email (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtEmail" class="input-dialog" placeholder="example@domain.com" type="email">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Số điện thoại (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtPhoneNumber" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
@@ -274,14 +275,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Vị trí</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtPosition" class="input-dialog" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Phòng ban</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtDepartment" class="input-dialog" type="text">
                             </div>
                         </div>
 
@@ -291,14 +292,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Mức lương cơ bản</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtSalary" class="input-dialog" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Tình trạng công việc</div>
                             <div class="wrap-input-dialog">
-                                <input class="input-dialog" type="text">
+                                <input id="txtStatus" class="input-dialog" type="text">
                             </div>
                         </div>
 
@@ -307,10 +308,10 @@
             </div>
 
             <div class="dialog-content-footer">
-                <button class="m-btn-icon btn-dialog-no-icon">
+                <button class="dialog-close m-btn-icon btn-dialog-no-icon">
                     <div class="btn-text btn-dialog">Hủy</div>
                 </button>
-                <button class="m-btn-icon btn-dialog-icon">
+                <button id="btn-save" class="m-btn-icon btn-dialog-icon">
                     <i class="far fa-save"></i>
                     <div class="btn-dialog">Lưu</div>
                 </button>
@@ -320,6 +321,7 @@
 
     <!-- Phần thư viện -->
     <script src="/lib/jquery-3.6.0.min.js"></script>
+    <script src="/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <!-- Phần dùng chung -->
     <script src="/js/common/common.js"></script>
     <script src="/js/common/base.js"></script>

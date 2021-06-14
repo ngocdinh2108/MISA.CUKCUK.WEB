@@ -63,12 +63,12 @@
 }
 
 .icon-refresh {
-    background-image: url('/content/icon/refresh.png');
-    width: 16px;
-    height: 16px;
+    background-image: url(/content/icon/refresh.png);
+    width: 36px;
+    height: 36px;
     background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
+    background-size: 16px;
+    background-position: center;
 }
 
 .icon-first-page {
