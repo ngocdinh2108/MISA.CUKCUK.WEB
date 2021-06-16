@@ -48,3 +48,12 @@
     font-size: 13px;
     color: #ffffff;
 }
+
+#m-btn-remove{
+    margin-right: 10px;
+    background-color: #f65454;
+}
+
+#m-btn-remove:hover{
+    background-color: #aa3535;
+}

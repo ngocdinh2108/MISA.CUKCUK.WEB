@@ -92,19 +92,24 @@ class Base {
                 $.each(ths, function (index, th) {
                     var td = $(`<td></td>`);
                     var fieldName = $(th).attr('fieldName');
-                    var value = obj[fieldName];
-                    var dataType = $(th).attr('dataType');
-                    switch (dataType) {
-                        case 'Date':
-                            value = formatDate(value);
-                            td.addClass("m-align-center");
-                            break;
-                        case 'Money':
-                            value = formatMoney(value);
-                            td.addClass("m-align-right");
-                            break;
-                        default:
-                            break;
+                    if (fieldName == "CheckBox") {
+                        value = '<input type="checkbox"></input>';
+                        td.addClass("m-align-center");
+                    } else {
+                        var value = obj[fieldName];
+                        var dataType = $(th).attr('dataType');
+                        switch (dataType) {
+                            case 'Date':
+                                value = formatDate(value);
+                                td.addClass("m-align-center");
+                                break;
+                            case 'Money':
+                                value = formatMoney(value);
+                                td.addClass("m-align-right");
+                                break;
+                            default:
+                                break;
+                        }
                     }
                     td.append(value);
                     tr.append(td);

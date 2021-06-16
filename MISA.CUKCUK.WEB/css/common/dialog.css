@@ -80,6 +80,17 @@
 .dialog-body-header {
     padding-bottom: 4px;
     font-size: 14px;
+    position: relative;
+}
+
+.dialog-body-header::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    top: 18px;
+    background-color: #019160;
 }
 
 .dialog-body-row {
@@ -112,4 +123,8 @@
     width: 244px;
     border: 1px solid #e5e5e5;
     padding-left: 16px;
+}
+
+.dialog-body-header-two{
+    margin-top: 20px;
 }

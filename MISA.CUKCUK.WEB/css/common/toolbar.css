@@ -3,6 +3,9 @@
     border-radius: 4px;
     outline: none;
     border: 1px solid #bbbbbb;
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    color: #000000;
 }
 
 .search-bar::placeholder {
