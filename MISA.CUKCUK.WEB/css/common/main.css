@@ -26,12 +26,16 @@ body {
     padding-left: 16px;
 }
 
-input:focus-within{
+input:focus-within {
     border: 1px solid #019160;
 }
 
-input.border-red{
+input.border-red {
     border: 1px solid #FF4747;
+}
+
+.row-selected {
+    background-color: #67c2a4;
 }
 
 @font-face {

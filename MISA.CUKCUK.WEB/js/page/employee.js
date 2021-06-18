@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     new Employee();
 })
 
@@ -16,8 +16,8 @@ class Employee extends Base {
         super();
     }
 
-    setDataJS(){
-        this.dataJS = employees;
+    setDataUrl() {
+        this.getDataUrl = "http://cukcuk.manhnv.net/v1/Employees";
     }
-    
+
 }

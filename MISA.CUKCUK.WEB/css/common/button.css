@@ -49,11 +49,20 @@
     color: #ffffff;
 }
 
-#m-btn-remove{
+#m-btn-remove {
     margin-right: 10px;
     background-color: #f65454;
 }
 
-#m-btn-remove:hover{
+#m-btn-remove:hover {
+    background-color: #aa3535;
+}
+
+.btn-remove {
+    margin-right: 10px;
+    background-color: #f65454;
+}
+
+.btn-remove:hover {
     background-color: #aa3535;
 }

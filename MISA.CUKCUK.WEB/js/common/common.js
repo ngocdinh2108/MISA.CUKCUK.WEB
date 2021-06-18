@@ -27,7 +27,7 @@ function formatDate(dateString) {
  */
 function formatMoney(money) {
     if (money) {
-        let result = money.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+        let result = money.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
         return result;
     } else {
         return "";

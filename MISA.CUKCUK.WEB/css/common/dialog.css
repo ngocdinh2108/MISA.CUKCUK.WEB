@@ -83,7 +83,7 @@
     position: relative;
 }
 
-.dialog-body-header::before{
+.dialog-body-header::before {
     content: "";
     display: block;
     position: absolute;
@@ -125,6 +125,18 @@
     padding-left: 16px;
 }
 
-.dialog-body-header-two{
+.dialog-body-header-two {
     margin-top: 20px;
+}
+
+input[fieldName] {
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    color: #000000;
+}
+
+select[fieldName] {
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    color: #000000;
 }

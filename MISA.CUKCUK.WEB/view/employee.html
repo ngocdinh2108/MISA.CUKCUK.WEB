@@ -150,17 +150,17 @@
                     <table border="0" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th fieldName="CheckBox" class="m-align-center"><input type="checkbox" /></th>
-                                <th fieldName="ID">Mã nhân viên</th>
+                                <!-- <th fieldName="CheckBox" class="m-align-center"><input type="checkbox" /></th> -->
+                                <th fieldName="EmployeeCode">Mã nhân viên</th>
                                 <th fieldName="FullName">Họ và tên</th>
-                                <th fieldName="Gender">Giới tính</th>
+                                <th fieldName="GenderName">Giới tính</th>
                                 <th fieldName="DateOfBirth" dataType="Date" class="m-align-center">Ngày sinh</th>
                                 <th fieldName="PhoneNumber">Điện thoại</th>
                                 <th fieldName="Email">Email</th>
-                                <th fieldName="Position">Chức vụ</th>
-                                <th fieldName="Department">Phòng ban</th>
+                                <th fieldName="PositionName">Chức vụ</th>
+                                <th fieldName="DepartmentName">Phòng ban</th>
                                 <th fieldName="Salary" dataType="Money" class="m-align-right">Mức lương cơ bản</th>
-                                <th fieldName="Status">Tình trạng công việc</th>
+                                <th fieldName="WorkStatus">Tình trạng công việc</th>
                             </tr>
                         </thead>
 
@@ -228,14 +228,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Mã nhân viên (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtID" class="input-dialog input-required" type="text">
+                                <input fieldName="EmployeeCode" id="txtID" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Họ và tên (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtFullName" class="input-dialog input-required" type="text">
+                                <input fieldName="FullName" id="txtFullName" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
@@ -245,17 +245,17 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Ngày sinh</div>
                             <div class="wrap-input-dialog">
-                                <input id="dtDateOfBirth" class="input-dialog" type="date">
+                                <input fieldName="DateOfBirth" id="dtDateOfBirth" class="input-dialog" type="date">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Giới tính</div>
                             <div class="wrap-input-dialog">
-                                <select id="cbxGender" class="select-gender" value="">
+                                <select fieldName="GenderName" id="cbxGender" class="select-gender" value="">
                                     <option name="" id="">Nam</option>
                                     <option name="" id="">Nữ</option>
-                                    <option name="" id="">Khác</option>
+                                    <option name="" id="">Không xác định</option>
                                 </select>
                             </div>
                         </div>
@@ -292,14 +292,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Email (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtEmail" class="input-dialog" placeholder="example@domain.com" type="email">
+                                <input fieldName="Email" id="txtEmail" class="input-dialog" placeholder="example@domain.com" type="email">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Số điện thoại (<span style="color: red;">*</span>)</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtPhoneNumber" class="input-dialog input-required" type="text">
+                                <input fieldName="PhoneNumber" id="txtPhoneNumber" class="input-dialog input-required" type="text">
                             </div>
                         </div>
 
@@ -311,14 +311,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Vị trí</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtPosition" class="input-dialog" type="text">
+                                <input fieldName="PositionName" id="txtPosition" class="input-dialog" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Phòng ban</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtDepartment" class="input-dialog" type="text">
+                                <input fieldName="DepartmentName" id="txtDepartment" class="input-dialog" type="text">
                             </div>
                         </div>
 
@@ -328,14 +328,14 @@
                         <div class="dialog-body-row-left">
                             <div class="dialog-label">Mức lương cơ bản</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtSalary" class="input-dialog" type="text">
+                                <input fieldName="Salary" id="txtSalary" class="input-dialog" type="text">
                             </div>
                         </div>
 
                         <div class="dialog-body-row-right">
                             <div class="dialog-label">Tình trạng công việc</div>
                             <div class="wrap-input-dialog">
-                                <input id="txtStatus" class="input-dialog" type="text">
+                                <input fieldName="WorkStatus" id="txtStatus" class="input-dialog" type="text">
                             </div>
                         </div>
 
@@ -356,9 +356,35 @@
     </div>
 
     <!-- Popup xóa -->
-    <div class="popup">
-        <div class="popup-header">Xóa bản ghi A</div>
+    <div class="popup-detail" hidden>
+        <div class="popup-modal"></div>
+        <div class="popup">
+            <div class="popup-header">
+                <div class="popup-header-text">Xóa bản ghi</div>
+                <button class="popup-close popup-header-icon icon-close"></button>
+            </div>
+
+            <div class="popup-body">
+                <div class="popup-body-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+                <div class="popup-body-text">
+                    Bạn có chắc chắn muốn xóa bản ghi này hay không?
+                </div>
+            </div>
+
+            <div class="popup-footer">
+                <button class="popup-close m-btn-icon btn-dialog-no-icon">
+                    <div class="btn-text btn-dialog">Hủy</div>
+                </button>
+                <button id="btn-remove" class="m-btn-icon btn-dialog-icon btn-remove">
+                    <div class="btn-dialog">Xóa</div>
+                </button>
+            </div>
+        </div>
     </div>
+
 
     <!-- Phần thư viện -->
     <script src="/lib/jquery-3.6.0.min.js"></script>
